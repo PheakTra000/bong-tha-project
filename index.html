@@ -10,14 +10,15 @@
 <body>
     <!-- Theme Toggle Button -->
     <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
-        <span class="theme-icon" id="themeIcon">🌙</span>
+        <span class="theme-icon" id="themeIcon">&#9729;</span>
     </button>
 
-    <header class="header">
-        <div class="container">
+    <header class="header" style="position:relative;overflow:hidden;">
+        <img src="./food-images/Good_Food_Display_-_NCI_Visuals_Online.jpg" alt="Header background" class="header-bg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;">
+        <div class="container" style="position:relative;z-index:1;">
             <div class="logo">
                 <h1>Bong Tha</h1>
-                <!-- <span class="tagline">Restaurant & Café</span> -->
+                <span class="tagline">Restaurant & Café</span>
             </div>
             <p class="tagline-mobile">Restaurant & Café</p>
         </div>
@@ -34,17 +35,14 @@
                 <!-- Food Item 1 -->
                 <article class="menu-item">
                     <div class="item-image">
-                        <div class="image-placeholder">
-                            <span class="camera-icon">📷</span>
-                            <span class="image-text">Add Photo</span>
-                        </div>
+                        <img src="./food-images/images.jpg">
                     </div>
                     <div class="item-content">
                         <div class="item-header">
                             <h3 class="item-name">Grilled Salmon</h3>
                             <span class="item-price">$24.99</span>
                         </div>
-                        <!-- <p class="item-description">Fresh Atlantic salmon grilled to perfection with herbs and served with seasonal vegetables.</p> -->
+                        <p class="item-description">Fresh Atlantic salmon grilled to perfection with herbs and served with seasonal vegetables.</p>
                         <button class="add-to-cart" onclick="addToOrder('Grilled Salmon', 24.99, 'food-images/salmon.jpg')">Add to Order</button>
                     </div>
                 </article>
@@ -52,17 +50,14 @@
                 <!-- Food Item 2 -->
                 <article class="menu-item">
                     <div class="item-image">
-                        <div class="image-placeholder">
-                            <span class="camera-icon">📷</span>
-                            <span class="image-text">Add Photo</span>
-                        </div>
+                        <img src="food-images/pasta.jpg" alt="Truffle Pasta">
                     </div>
                     <div class="item-content">
                         <div class="item-header">
                             <h3 class="item-name">Truffle Pasta</h3>
                             <span class="item-price">$18.50</span>
                         </div>
-                        <!-- <p class="item-description">Handmade fettuccine tossed in creamy truffle sauce with parmesan and fresh herbs.</p> -->
+                        <p class="item-description">Handmade fettuccine tossed in creamy truffle sauce with parmesan and fresh herbs.</p>
                         <button class="add-to-cart" onclick="addToOrder('Truffle Pasta', 18.50, 'food-images/pasta.jpg')">Add to Order</button>
                     </div>
                 </article>
@@ -70,17 +65,14 @@
                 <!-- Food Item 3 -->
                 <article class="menu-item">
                     <div class="item-image">
-                        <div class="image-placeholder">
-                            <span class="camera-icon">📷</span>
-                            <span class="image-text">Add Photo</span>
-                        </div>
+                        <img src="food-images/steak.jpg" alt="Wagyu Steak">
                     </div>
                     <div class="item-content">
                         <div class="item-header">
                             <h3 class="item-name">Wagyu Steak</h3>
                             <span class="item-price">$45.00</span>
                         </div>
-                        <!-- <p class="item-description">Premium A5 Wagyu beef, dry-aged for 30 days, served with garlic mashed potatoes.</p> -->
+                        <p class="item-description">Premium A5 Wagyu beef, dry-aged for 30 days, served with garlic mashed potatoes.</p>
                         <button class="add-to-cart" onclick="addToOrder('Wagyu Steak', 45.00, 'food-images/steak.jpg')">Add to Order</button>
                     </div>
                 </article>
@@ -88,17 +80,14 @@
                 <!-- Food Item 4 -->
                 <article class="menu-item">
                     <div class="item-image">
-                        <div class="image-placeholder">
-                            <span class="camera-icon">📷</span>
-                            <span class="image-text">Add Photo</span>
-                        </div>
+                        <img src="food-images/bisque.jpg" alt="Lobster Bisque">
                     </div>
                     <div class="item-content">
                         <div class="item-header">
                             <h3 class="item-name">Lobster Bisque</h3>
                             <span class="item-price">$14.99</span>
                         </div>
-                        <!-- <p class="item-description">Rich and creamy soup made with fresh Maine lobster, cognac, and a hint of saffron.</p> -->
+                        <p class="item-description">Rich and creamy soup made with fresh Maine lobster, cognac, and a hint of saffron.</p>
                         <button class="add-to-cart" onclick="addToOrder('Lobster Bisque', 14.99, 'food-images/bisque.jpg')">Add to Order</button>
                     </div>
                 </article>
@@ -106,17 +95,14 @@
                 <!-- Food Item 5 -->
                 <article class="menu-item">
                     <div class="item-image">
-                        <div class="image-placeholder">
-                            <span class="camera-icon">📷</span>
-                            <span class="image-text">Add Photo</span>
-                        </div>
+                        <img src="food-images/salad.jpg" alt="Caesar Salad">
                     </div>
                     <div class="item-content">
                         <div class="item-header">
                             <h3 class="item-name">Caesar Salad</h3>
                             <span class="item-price">$12.99</span>
                         </div>
-                        <!-- <p class="item-description">Crisp romaine lettuce, house-made caesar dressing, croutons, and shaved parmesan.</p> -->
+                        <p class="item-description">Crisp romaine lettuce, house-made caesar dressing, croutons, and shaved parmesan.</p>
                         <button class="add-to-cart" onclick="addToOrder('Caesar Salad', 12.99, 'food-images/salad.jpg')">Add to Order</button>
                     </div>
                 </article>
@@ -124,17 +110,14 @@
                 <!-- Food Item 6 -->
                 <article class="menu-item">
                     <div class="item-image">
-                        <div class="image-placeholder">
-                            <span class="camera-icon">📷</span>
-                            <span class="image-text">Add Photo</span>
-                        </div>
+                        <img src="food-images/risotto.jpg" alt="Mushroom Risotto">
                     </div>
                     <div class="item-content">
                         <div class="item-header">
                             <h3 class="item-name">Mushroom Risotto</h3>
                             <span class="item-price">$16.99</span>
                         </div>
-                        <!-- <p class="item-description">Arborio rice with wild mushrooms, white wine, truffle oil, and aged parmesan.</p> -->
+                        <p class="item-description">Arborio rice with wild mushrooms, white wine, truffle oil, and aged parmesan.</p>
                         <button class="add-to-cart" onclick="addToOrder('Mushroom Risotto', 16.99, 'food-images/risotto.jpg')">Add to Order</button>
                     </div>
                 </article>
@@ -142,17 +125,14 @@
                 <!-- Food Item 7 -->
                 <article class="menu-item">
                     <div class="item-image">
-                        <div class="image-placeholder">
-                            <span class="camera-icon">📷</span>
-                            <span class="image-text">Add Photo</span>
-                        </div>
+                        <img src="food-images/chicken.jpg" alt="Chicken Marsala">
                     </div>
                     <div class="item-content">
                         <div class="item-header">
                             <h3 class="item-name">Chicken Marsala</h3>
                             <span class="item-price">$22.99</span>
                         </div>
-                        <!-- <p class="item-description">Pan-seared chicken breast in mushroom marsala sauce, served with roasted vegetables.</p> -->
+                        <p class="item-description">Pan-seared chicken breast in mushroom marsala sauce, served with roasted vegetables.</p>
                         <button class="add-to-cart" onclick="addToOrder('Chicken Marsala', 22.99, 'food-images/chicken.jpg')">Add to Order</button>
                     </div>
                 </article>
@@ -160,17 +140,14 @@
                 <!-- Food Item 8 -->
                 <article class="menu-item">
                     <div class="item-image">
-                        <div class="image-placeholder">
-                            <span class="camera-icon">📷</span>
-                            <span class="image-text">Add Photo</span>
-                        </div>
+                        <img src="food-images/lava-cake.jpg" alt="Chocolate Lava Cake">
                     </div>
                     <div class="item-content">
                         <div class="item-header">
                             <h3 class="item-name">Chocolate Lava Cake</h3>
                             <span class="item-price">$10.99</span>
                         </div>
-                        <!-- <p class="item-description">Warm chocolate cake with molten center, served with vanilla bean ice cream.</p> -->
+                        <p class="item-description">Warm chocolate cake with molten center, served with vanilla bean ice cream.</p>
                         <button class="add-to-cart" onclick="addToOrder('Chocolate Lava Cake', 10.99, 'food-images/lava-cake.jpg')">Add to Order</button>
                     </div>
                 </article>
@@ -178,17 +155,14 @@
                 <!-- Food Item 9 -->
                 <article class="menu-item">
                     <div class="item-image">
-                        <div class="image-placeholder">
-                            <span class="camera-icon">📷</span>
-                            <span class="image-text">Add Photo</span>
-                        </div>
+                        <img src="food-images/tiramisu.jpg" alt="Tiramisu">
                     </div>
                     <div class="item-content">
                         <div class="item-header">
                             <h3 class="item-name">Tiramisu</h3>
                             <span class="item-price">$9.99</span>
                         </div>
-                        <!-- <p class="item-description">Classic Italian dessert with espresso-soaked ladyfingers, mascarpone cream, and cocoa.</p> -->
+                        <p class="item-description">Classic Italian dessert with espresso-soaked ladyfingers, mascarpone cream, and cocoa.</p>
                         <button class="add-to-cart" onclick="addToOrder('Tiramisu', 9.99, 'food-images/tiramisu.jpg')">Add to Order</button>
                     </div>
                 </article>
@@ -196,17 +170,14 @@
                 <!-- Food Item 10 -->
                 <article class="menu-item">
                     <div class="item-image">
-                        <div class="image-placeholder">
-                            <span class="camera-icon">📷</span>
-                            <span class="image-text">Add Photo</span>
-                        </div>
+                        <img src="food-images/lemonade.jpg" alt="Craft Lemonade">
                     </div>
                     <div class="item-content">
                         <div class="item-header">
                             <h3 class="item-name">Craft Lemonade</h3>
                             <span class="item-price">$5.99</span>
                         </div>
-                        <!-- <p class="item-description">Fresh-squeezed lemonade with a hint of mint and honey.</p> -->
+                        <p class="item-description">Fresh-squeezed lemonade with a hint of mint and honey.</p>
                         <button class="add-to-cart" onclick="addToOrder('Craft Lemonade', 5.99, 'food-images/lemonade.jpg')">Add to Order</button>
                     </div>
                 </article>
@@ -214,17 +185,14 @@
                 <!-- Food Item 11 -->
                 <article class="menu-item">
                     <div class="item-image">
-                        <div class="image-placeholder">
-                            <span class="camera-icon">📷</span>
-                            <span class="image-text">Add Photo</span>
-                        </div>
+                        <img src="food-images/cappuccino.jpg" alt="Cappuccino">
                     </div>
                     <div class="item-content">
                         <div class="item-header">
                             <h3 class="item-name">Cappuccino</h3>
                             <span class="item-price">$4.99</span>
                         </div>
-                        <!-- <p class="item-description">Rich espresso with steamed milk and foam, dusted with cocoa powder.</p> -->
+                        <p class="item-description">Rich espresso with steamed milk and foam, dusted with cocoa powder.</p>
                         <button class="add-to-cart" onclick="addToOrder('Cappuccino', 4.99, 'food-images/cappuccino.jpg')">Add to Order</button>
                     </div>
                 </article>
@@ -232,17 +200,14 @@
                 <!-- Food Item 12 -->
                 <article class="menu-item">
                     <div class="item-image">
-                        <div class="image-placeholder">
-                            <span class="camera-icon">📷</span>
-                            <span class="image-text">Add Photo</span>
-                        </div>
+                        <img src="food-images/bruschetta.jpg" alt="Bruschetta">
                     </div>
                     <div class="item-content">
                         <div class="item-header">
                             <h3 class="item-name">Bruschetta</h3>
                             <span class="item-price">$11.99</span>
                         </div>
-                        <!-- <p class="item-description">Toasted bread topped with fresh tomatoes, basil, garlic, and extra virgin olive oil.</p> -->
+                        <p class="item-description">Toasted bread topped with fresh tomatoes, basil, garlic, and extra virgin olive oil.</p>
                         <button class="add-to-cart" onclick="addToOrder('Bruschetta', 11.99, 'food-images/bruschetta.jpg')">Add to Order</button>
                     </div>
                 </article>
@@ -252,7 +217,7 @@
 
     <!-- Floating Cart Button -->
     <button class="cart-float" onclick="toggleCart()">
-        <span class="cart-icon"></span>
+        <span class="cart-icon">&#128722;</span>
         <span class="cart-badge" id="cartBadge">0</span>
     </button>
 
@@ -260,8 +225,8 @@
     <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
     <div class="cart-popup" id="cartPopup">
         <div class="cart-header">
-            <h3>🛒 Your Order</h3>
-            <button class="close-btn" onclick="closeCart()">×</button>
+            <h3>&#128722; Your Order</h3>
+            <button class="close-btn" onclick="closeCart()">&#215;</button>
         </div>
         <div class="cart-list" id="cartList">
             <p class="empty-cart">No items added yet</p>
@@ -286,37 +251,42 @@
         let currentTheme = localStorage.getItem('theme') || 'system';
 
         function initTheme() {
-            const themeIcon = document.getElementById('themeIcon');
+            var themeIcon = document.getElementById('themeIcon');
             
             if (currentTheme === 'system') {
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
                 document.documentElement.classList.toggle('dark-mode', prefersDark);
-                themeIcon.textContent = '💻';
+                themeIcon.innerHTML = '&#128187;';
             } else if (currentTheme === 'dark') {
                 document.documentElement.classList.add('dark-mode');
-                themeIcon.textContent = '☀️';
+                themeIcon.innerHTML = '&#9728;';
             } else {
                 document.documentElement.classList.remove('dark-mode');
-                themeIcon.textContent = '🌙';
+                themeIcon.innerHTML = '&#9729;';
             }
         }
 
         function toggleTheme() {
-            const themeIndex = themeOptions.indexOf(currentTheme);
+            var themeIndex = themeOptions.indexOf(currentTheme);
             currentTheme = themeOptions[(themeIndex + 1) % themeOptions.length];
             localStorage.setItem('theme', currentTheme);
             initTheme();
         }
 
-        // Listen for system theme changes
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
             if (currentTheme === 'system') {
                 document.documentElement.classList.toggle('dark-mode', e.matches);
             }
         });
 
         function addToOrder(itemName, price, imagePath) {
-            const existingItem = orderItems.find(item => item.name === itemName);
+            var existingItem = null;
+            for (var i = 0; i < orderItems.length; i++) {
+                if (orderItems[i].name === itemName) {
+                    existingItem = orderItems[i];
+                    break;
+                }
+            }
             
             if (existingItem) {
                 existingItem.quantity++;
@@ -335,11 +305,13 @@
         }
 
         function removeItem(itemName) {
-            const existingItem = orderItems.find(item => item.name === itemName);
-            if (existingItem) {
-                existingItem.quantity--;
-                if (existingItem.quantity <= 0) {
-                    orderItems = orderItems.filter(item => item.name !== itemName);
+            for (var i = 0; i < orderItems.length; i++) {
+                if (orderItems[i].name === itemName) {
+                    orderItems[i].quantity--;
+                    if (orderItems[i].quantity <= 0) {
+                        orderItems.splice(i, 1);
+                    }
+                    break;
                 }
             }
             updateCartBadge();
@@ -347,15 +319,23 @@
         }
 
         function deleteItem(itemName) {
-            orderItems = orderItems.filter(item => item.name !== itemName);
+            for (var i = 0; i < orderItems.length; i++) {
+                if (orderItems[i].name === itemName) {
+                    orderItems.splice(i, 1);
+                    break;
+                }
+            }
             updateCartBadge();
             renderCart();
             showToast('Item removed');
         }
 
         function updateCartBadge() {
-            const badge = document.getElementById('cartBadge');
-            const totalItems = orderItems.reduce((sum, item) => sum + item.quantity, 0);
+            var badge = document.getElementById('cartBadge');
+            var totalItems = 0;
+            for (var i = 0; i < orderItems.length; i++) {
+                totalItems += orderItems[i].quantity;
+            }
             badge.textContent = totalItems;
             
             if (totalItems > 0) {
@@ -366,8 +346,8 @@
         }
 
         function toggleCart() {
-            const overlay = document.getElementById('cartOverlay');
-            const popup = document.getElementById('cartPopup');
+            var overlay = document.getElementById('cartOverlay');
+            var popup = document.getElementById('cartPopup');
             
             renderCart();
             
@@ -386,48 +366,57 @@
         }
 
         function renderCart() {
-            const cartList = document.getElementById('cartList');
-            const cartTotal = document.getElementById('cartTotal');
+            var cartList = document.getElementById('cartList');
+            var cartTotal = document.getElementById('cartTotal');
             
-            const totalPrice = orderItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            var totalPrice = 0;
+            for (var i = 0; i < orderItems.length; i++) {
+                totalPrice += orderItems[i].price * orderItems[i].quantity;
+            }
             
             if (orderItems.length === 0) {
                 cartList.innerHTML = '<p class="empty-cart">No items added yet</p>';
             } else {
-                cartList.innerHTML = orderItems.map(item => `
-                    <div class="cart-item" data-name="${item.name}">
-                        <div class="cart-item-image">
-                            <img src="${item.image}" alt="${item.name}" onerror="this.parentElement.innerHTML='<div class=\\'image-placeholder-small\\'><span>📷</span></div>'">
-                        </div>
-                        <div class="cart-item-details">
-                            <span class="cart-item-name">${item.name}</span>
-                            <div class="cart-item-controls">
-                                <button class="qty-btn minus" onclick="removeItem('${item.name.replace(/'/g, "\\'")}')">−</button>
-                                <span class="qty">${item.quantity}</span>
-                                <button class="qty-btn plus" onclick="addToOrder('${item.name.replace(/'/g, "\\'")}', ${item.price}, '${item.image.replace(/'/g, "\\'")}')">+</button>
-                                <span class="cart-item-price">$${(item.price * item.quantity).toFixed(2)}</span>
-                            </div>
-                        </div>
-                        <button class="delete-btn" onclick="deleteItem('${item.name.replace(/'/g, "\\'")}')">×</button>
-                    </div>
-                `).join('');
+                var html = '';
+                for (var i = 0; i < orderItems.length; i++) {
+                    var item = orderItems[i];
+                    var itemPrice = (item.price * item.quantity).toFixed(2);
+                    var safeName = item.name.replace(/'/g, "\\'");
+                    var safeImage = item.image.replace(/'/g, "\\'");
+                    html += '<div class="cart-item" data-name="' + item.name + '">';
+                    html += '<div class="cart-item-image">';
+                    html += '<img src="' + item.image + '" alt="' + item.name + '" onerror="this.src=\'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%23f0f0f0%22 width=%22100%22 height=%22100%22/><text x=%2250%22 y=%2255%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22%23ccc%22>&#128247;</text></svg>\'">';
+                    html += '</div>';
+                    html += '<div class="cart-item-details">';
+                    html += '<span class="cart-item-name">' + item.name + '</span>';
+                    html += '<div class="cart-item-controls">';
+                    html += '<button class="qty-btn minus" onclick="removeItem(\'' + safeName + '\')">&#8722;</button>';
+                    html += '<span class="qty">' + item.quantity + '</span>';
+                    html += '<button class="qty-btn plus" onclick="addToOrder(\'' + safeName + '\', ' + item.price + ', \'' + safeImage + '\')">&#43;</button>';
+                    html += '<span class="cart-item-price">$' + itemPrice + '</span>';
+                    html += '</div>';
+                    html += '</div>';
+                    html += '<button class="delete-btn" onclick="deleteItem(\'' + safeName + '\')">&#215;</button>';
+                    html += '</div>';
+                }
+                cartList.innerHTML = html;
             }
             
             cartTotal.textContent = '$' + totalPrice.toFixed(2);
         }
 
         function showToast(message) {
-            const existingToast = document.querySelector('.toast');
+            var existingToast = document.querySelector('.toast');
             if (existingToast) {
                 existingToast.remove();
             }
 
-            const toast = document.createElement('div');
+            var toast = document.createElement('div');
             toast.className = 'toast';
             toast.textContent = message;
             document.body.appendChild(toast);
 
-            setTimeout(() => {
+            setTimeout(function() {
                 toast.remove();
             }, 2000);
         }
