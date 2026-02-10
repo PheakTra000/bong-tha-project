@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Menu | Bong Tha</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Theme Toggle Button -->
@@ -13,9 +13,9 @@
         <span class="theme-icon" id="themeIcon">&#9729;</span>
     </button>
 
-    <header class="header" style="position:relative;overflow:hidden;">
-        <img src="./food-images/Good_Food_Display_-_NCI_Visuals_Online.jpg" alt="Header background" class="header-bg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;">
-        <div class="container" style="position:relative;z-index:1;">
+    <header class="header">
+        <img src="./food-images/Good_Food_Display_-_NCI_Visuals_Online.jpg" alt="Seasonal dishes" class="header-bg">
+        <div class="container">
             <div class="logo">
                 <h1>Bong Tha</h1>
                 <span class="tagline">Restaurant & Café</span>
@@ -28,189 +28,337 @@
         <div class="container">
             <section class="menu-header">
                 <h2>Our Menu</h2>
-                <p class="menu-subtitle">Discover our delicious offerings</p>
+                <p class="menu-subtitle">A curated spread of comfort classics and house signatures.</p>
             </section>
 
-            <section class="menu-grid">
-                <!-- Food Item 1 -->
-                <article class="menu-item">
-                    <div class="item-image">
-                        <img src="./food-images/Ridiculously-Tasty-Beef-Tenderloin-3-scaled.jpg">
-                    </div>
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3 class="item-name">Grilled Salmon</h3>
-                            <span class="item-price">$24.99</span>
-                        </div>
-                        <p class="item-description">Fresh Atlantic salmon grilled to perfection with herbs and served with seasonal vegetables.</p>
-                        <button class="add-to-cart" onclick="addToOrder('Grilled Salmon', 24.99, 'food-images/salmon.jpg')">Add to Order</button>
-                    </div>
-                </article>
+            <section class="info-strip">
+                <div class="info-item">
+                    <span class="info-label">Hours</span>
+                    <span>Daily · 11:00 AM – 11:00 PM</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Location</span>
+                    <span>Central City · Dine-in & Pickup</span>
+                </div>
+                <a class="info-cta" href="#mains">Explore Mains</a>
+            </section>
 
-                <!-- Food Item 2 -->
-                <article class="menu-item">
-                    <div class="item-image">
-                        <img src="food-images/pasta.jpg" alt="Truffle Pasta">
-                    </div>
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3 class="item-name">Truffle Pasta</h3>
-                            <span class="item-price">$18.50</span>
-                        </div>
-                        <p class="item-description">Handmade fettuccine tossed in creamy truffle sauce with parmesan and fresh herbs.</p>
-                        <button class="add-to-cart" onclick="addToOrder('Truffle Pasta', 18.50, 'food-images/pasta.jpg')">Add to Order</button>
-                    </div>
-                </article>
+            <nav class="menu-categories">
+                <a class="pill" href="#starters">Starters</a>
+                <a class="pill" href="#mains">Mains</a>
+                <a class="pill" href="#sweets">Sweets</a>
+                <a class="pill" href="#drinks">Drinks</a>
+            </nav>
 
-                <!-- Food Item 3 -->
-                <article class="menu-item">
-                    <div class="item-image">
-                        <img src="food-images/steak.jpg" alt="Wagyu Steak">
+            <section class="menu-section" id="starters">
+                <div class="section-header">
+                    <div>
+                        <h3>Starters</h3>
+                        <p>Bright, shareable plates to begin.</p>
                     </div>
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3 class="item-name">Wagyu Steak</h3>
-                            <span class="item-price">$45.00</span>
-                        </div>
-                        <p class="item-description">Premium A5 Wagyu beef, dry-aged for 30 days, served with garlic mashed potatoes.</p>
-                        <button class="add-to-cart" onclick="addToOrder('Wagyu Steak', 45.00, 'food-images/steak.jpg')">Add to Order</button>
-                    </div>
-                </article>
-
-                <!-- Food Item 4 -->
-                <article class="menu-item">
-                    <div class="item-image">
-                        <img src="food-images/bisque.jpg" alt="Lobster Bisque">
-                    </div>
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3 class="item-name">Lobster Bisque</h3>
-                            <span class="item-price">$14.99</span>
-                        </div>
-                        <p class="item-description">Rich and creamy soup made with fresh Maine lobster, cognac, and a hint of saffron.</p>
-                        <button class="add-to-cart" onclick="addToOrder('Lobster Bisque', 14.99, 'food-images/bisque.jpg')">Add to Order</button>
-                    </div>
-                </article>
-
-                <!-- Food Item 5 -->
-                <article class="menu-item">
-                    <div class="item-image">
-                        <img src="food-images/salad.jpg" alt="Caesar Salad">
-                    </div>
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3 class="item-name">Caesar Salad</h3>
-                            <span class="item-price">$12.99</span>
-                        </div>
-                        <p class="item-description">Crisp romaine lettuce, house-made caesar dressing, croutons, and shaved parmesan.</p>
-                        <button class="add-to-cart" onclick="addToOrder('Caesar Salad', 12.99, 'food-images/salad.jpg')">Add to Order</button>
-                    </div>
-                </article>
-
-                <!-- Food Item 6 -->
-                <article class="menu-item">
-                    <div class="item-image">
-                        <img src="food-images/risotto.jpg" alt="Mushroom Risotto">
-                    </div>
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3 class="item-name">Mushroom Risotto</h3>
-                            <span class="item-price">$16.99</span>
-                        </div>
-                        <p class="item-description">Arborio rice with wild mushrooms, white wine, truffle oil, and aged parmesan.</p>
-                        <button class="add-to-cart" onclick="addToOrder('Mushroom Risotto', 16.99, 'food-images/risotto.jpg')">Add to Order</button>
-                    </div>
-                </article>
-
-                <!-- Food Item 7 -->
-                <article class="menu-item">
-                    <div class="item-image">
-                        <img src="food-images/chicken.jpg" alt="Chicken Marsala">
-                    </div>
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3 class="item-name">Chicken Marsala</h3>
-                            <span class="item-price">$22.99</span>
-                        </div>
-                        <p class="item-description">Pan-seared chicken breast in mushroom marsala sauce, served with roasted vegetables.</p>
-                        <button class="add-to-cart" onclick="addToOrder('Chicken Marsala', 22.99, 'food-images/chicken.jpg')">Add to Order</button>
-                    </div>
-                </article>
-
-                <!-- Food Item 8 -->
-                <article class="menu-item">
-                    <div class="item-image">
-                        <img src="food-images/lava-cake.jpg" alt="Chocolate Lava Cake">
-                    </div>
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3 class="item-name">Chocolate Lava Cake</h3>
-                            <span class="item-price">$10.99</span>
-                        </div>
-                        <p class="item-description">Warm chocolate cake with molten center, served with vanilla bean ice cream.</p>
-                        <button class="add-to-cart" onclick="addToOrder('Chocolate Lava Cake', 10.99, 'food-images/lava-cake.jpg')">Add to Order</button>
-                    </div>
-                </article>
-
-                <!-- Food Item 9 -->
-                <article class="menu-item">
-                    <div class="item-image">
-                        <img src="food-images/tiramisu.jpg" alt="Tiramisu">
-                    </div>
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3 class="item-name">Tiramisu</h3>
-                            <span class="item-price">$9.99</span>
-                        </div>
-                        <p class="item-description">Classic Italian dessert with espresso-soaked ladyfingers, mascarpone cream, and cocoa.</p>
-                        <button class="add-to-cart" onclick="addToOrder('Tiramisu', 9.99, 'food-images/tiramisu.jpg')">Add to Order</button>
-                    </div>
-                </article>
-
-                <!-- Food Item 10 -->
-                <article class="menu-item">
-                    <div class="item-image">
-                        <img src="food-images/lemonade.jpg" alt="Craft Lemonade">
-                    </div>
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3 class="item-name">Craft Lemonade</h3>
-                            <span class="item-price">$5.99</span>
-                        </div>
-                        <p class="item-description">Fresh-squeezed lemonade with a hint of mint and honey.</p>
-                        <button class="add-to-cart" onclick="addToOrder('Craft Lemonade', 5.99, 'food-images/lemonade.jpg')">Add to Order</button>
-                    </div>
-                </article>
-
-                <!-- Food Item 11 -->
-                <article class="menu-item">
-                    <div class="item-image">
-                        <img src="food-images/cappuccino.jpg" alt="Cappuccino">
-                    </div>
-                    <div class="item-content">
-                        <div class="item-header">
-                            <h3 class="item-name">Cappuccino</h3>
-                            <span class="item-price">$4.99</span>
-                        </div>
-                        <p class="item-description">Rich espresso with steamed milk and foam, dusted with cocoa powder.</p>
-                        <button class="add-to-cart" onclick="addToOrder('Cappuccino', 4.99, 'food-images/cappuccino.jpg')">Add to Order</button>
-                    </div>
-                </article>
-
+                    <span class="section-note">Pairs well with a crisp lemonade.</span>
+                </div>
+                <div class="menu-grid">
                 <!-- Food Item 12 -->
-                <article class="menu-item">
+                <article class="menu-item accent-olive">
                     <div class="item-image">
-                        <img src="food-images/bruschetta.jpg" alt="Bruschetta">
+                        <img src="food-images/Good_Food_Display_-_NCI_Visuals_Online.jpg" alt="Bruschetta">
                     </div>
                     <div class="item-content">
                         <div class="item-header">
                             <h3 class="item-name">Bruschetta</h3>
                             <span class="item-price">$11.99</span>
                         </div>
+                        <div class="item-badges">
+                            <span class="item-badge vegan">Vegan</span>
+                            <span class="item-badge share">Shareable</span>
+                        </div>
                         <p class="item-description">Toasted bread topped with fresh tomatoes, basil, garlic, and extra virgin olive oil.</p>
-                        <button class="add-to-cart" onclick="addToOrder('Bruschetta', 11.99, 'food-images/bruschetta.jpg')">Add to Order</button>
+                        <div class="item-tags">
+                            <span>House-made</span>
+                            <span>Extra virgin olive oil</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToOrder('Bruschetta', 11.99, 'food-images/Good_Food_Display_-_NCI_Visuals_Online.jpg')">Add to Order</button>
                     </div>
                 </article>
+
+                <!-- Food Item 4 -->
+                <article class="menu-item accent-sand">
+                    <div class="item-image">
+                        <img src="food-images/Good_Food_Display_-_NCI_Visuals_Online.jpg" alt="Lobster Bisque">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">Lobster Bisque</h3>
+                            <span class="item-price">$14.99</span>
+                        </div>
+                        <div class="item-badges">
+                            <span class="item-badge signature">Signature</span>
+                        </div>
+                        <p class="item-description">Rich and creamy soup made with fresh Maine lobster, cognac, and a hint of saffron.</p>
+                        <div class="item-tags">
+                            <span>Slow simmered</span>
+                            <span>Saffron</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToOrder('Lobster Bisque', 14.99, 'food-images/Good_Food_Display_-_NCI_Visuals_Online.jpg')">Add to Order</button>
+                    </div>
+                </article>
+
+                <!-- Food Item 5 -->
+                <article class="menu-item accent-sea">
+                    <div class="item-image">
+                        <img src="food-images/Good_Food_Display_-_NCI_Visuals_Online.jpg" alt="Caesar Salad">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">Caesar Salad</h3>
+                            <span class="item-price">$12.99</span>
+                        </div>
+                        <div class="item-badges">
+                            <span class="item-badge classic">Classic</span>
+                        </div>
+                        <p class="item-description">Crisp romaine lettuce, house-made caesar dressing, croutons, and shaved parmesan.</p>
+                        <div class="item-tags">
+                            <span>House dressing</span>
+                            <span>Parmesan</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToOrder('Caesar Salad', 12.99, 'food-images/Good_Food_Display_-_NCI_Visuals_Online.jpg')">Add to Order</button>
+                    </div>
+                </article>
+                </div>
+            </section>
+
+            <section class="menu-section" id="mains">
+                <div class="section-header">
+                    <div>
+                        <h3>Mains</h3>
+                        <p>Hearty plates crafted for the main event.</p>
+                    </div>
+                    <span class="section-note">Chef's favorites are marked.</span>
+                </div>
+                <div class="menu-grid">
+                <!-- Food Item 1 -->
+                <article class="menu-item accent-sea">
+                    <div class="item-image">
+                        <img src="./food-images/Good_Food_Display_-_NCI_Visuals_Online.jpg" alt="Grilled Salmon">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">Grilled Salmon</h3>
+                            <span class="item-price">$24.99</span>
+                        </div>
+                        <div class="item-badges">
+                            <span class="item-badge signature">Signature</span>
+                            <span class="item-badge glutenfree">Gluten-Free</span>
+                        </div>
+                        <p class="item-description">Fresh Atlantic salmon grilled to perfection with herbs and served with seasonal vegetables.</p>
+                        <div class="item-tags">
+                            <span>Citrus herb rub</span>
+                            <span>Seasonal veg</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToOrder('Grilled Salmon', 24.99, 'food-images/Good_Food_Display_-_NCI_Visuals_Online.jpg')">Add to Order</button>
+                    </div>
+                </article>
+
+                <!-- Food Item 2 -->
+                <article class="menu-item accent-sand">
+                    <div class="item-image">
+                        <img src="food-images/images.jpg" alt="Truffle Pasta">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">Truffle Pasta</h3>
+                            <span class="item-price">$18.50</span>
+                        </div>
+                        <div class="item-badges">
+                            <span class="item-badge chef">Chef's Pick</span>
+                        </div>
+                        <p class="item-description">Handmade fettuccine tossed in creamy truffle sauce with parmesan and fresh herbs.</p>
+                        <div class="item-tags">
+                            <span>Fresh pasta</span>
+                            <span>Truffle cream</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToOrder('Truffle Pasta', 18.50, 'food-images/images.jpg')">Add to Order</button>
+                    </div>
+                </article>
+
+                <!-- Food Item 3 -->
+                <article class="menu-item accent-ink">
+                    <div class="item-image">
+                        <img src="food-images/Ridiculously-Tasty-Beef-Tenderloin-3-scaled.jpg" alt="Wagyu Steak">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">Wagyu Steak</h3>
+                            <span class="item-price">$45.00</span>
+                        </div>
+                        <div class="item-badges">
+                            <span class="item-badge signature">Signature</span>
+                        </div>
+                        <p class="item-description">Premium A5 Wagyu beef, dry-aged for 30 days, served with garlic mashed potatoes.</p>
+                        <div class="item-tags">
+                            <span>Dry-aged</span>
+                            <span>Garlic mash</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToOrder('Wagyu Steak', 45.00, 'food-images/Ridiculously-Tasty-Beef-Tenderloin-3-scaled.jpg')">Add to Order</button>
+                    </div>
+                </article>
+
+                <!-- Food Item 6 -->
+                <article class="menu-item accent-olive">
+                    <div class="item-image">
+                        <img src="food-images/images.jpg" alt="Mushroom Risotto">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">Mushroom Risotto</h3>
+                            <span class="item-price">$16.99</span>
+                        </div>
+                        <div class="item-badges">
+                            <span class="item-badge vegetarian">Vegetarian</span>
+                        </div>
+                        <p class="item-description">Arborio rice with wild mushrooms, white wine, truffle oil, and aged parmesan.</p>
+                        <div class="item-tags">
+                            <span>Wild mushrooms</span>
+                            <span>Parmesan</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToOrder('Mushroom Risotto', 16.99, 'food-images/images.jpg')">Add to Order</button>
+                    </div>
+                </article>
+
+                <!-- Food Item 7 -->
+                <article class="menu-item accent-sea">
+                    <div class="item-image">
+                        <img src="food-images/images.jpg" alt="Chicken Marsala">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">Chicken Marsala</h3>
+                            <span class="item-price">$22.99</span>
+                        </div>
+                        <div class="item-badges">
+                            <span class="item-badge classic">Classic</span>
+                        </div>
+                        <p class="item-description">Pan-seared chicken breast in mushroom marsala sauce, served with roasted vegetables.</p>
+                        <div class="item-tags">
+                            <span>Marsala glaze</span>
+                            <span>Roasted veg</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToOrder('Chicken Marsala', 22.99, 'food-images/images.jpg')">Add to Order</button>
+                    </div>
+                </article>
+
+                </div>
+            </section>
+
+            <section class="menu-section" id="sweets">
+                <div class="section-header">
+                    <div>
+                        <h3>Sweets</h3>
+                        <p>Warm, comforting finishes.</p>
+                    </div>
+                    <span class="section-note">Ask about seasonal specials.</span>
+                </div>
+                <div class="menu-grid">
+                <!-- Food Item 8 -->
+                <article class="menu-item accent-sand">
+                    <div class="item-image">
+                        <img src="food-images/images.jpg" alt="Chocolate Lava Cake">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">Chocolate Lava Cake</h3>
+                            <span class="item-price">$10.99</span>
+                        </div>
+                        <div class="item-badges">
+                            <span class="item-badge chef">Chef's Pick</span>
+                        </div>
+                        <p class="item-description">Warm chocolate cake with molten center, served with vanilla bean ice cream.</p>
+                        <div class="item-tags">
+                            <span>Molten center</span>
+                            <span>Vanilla bean</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToOrder('Chocolate Lava Cake', 10.99, 'food-images/images.jpg')">Add to Order</button>
+                    </div>
+                </article>
+
+                <!-- Food Item 9 -->
+                <article class="menu-item accent-olive">
+                    <div class="item-image">
+                        <img src="food-images/images.jpg" alt="Tiramisu">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">Tiramisu</h3>
+                            <span class="item-price">$9.99</span>
+                        </div>
+                        <div class="item-badges">
+                            <span class="item-badge classic">Classic</span>
+                        </div>
+                        <p class="item-description">Classic Italian dessert with espresso-soaked ladyfingers, mascarpone cream, and cocoa.</p>
+                        <div class="item-tags">
+                            <span>Mascarpone</span>
+                            <span>Espresso</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToOrder('Tiramisu', 9.99, 'food-images/images.jpg')">Add to Order</button>
+                    </div>
+                </article>
+                </div>
+            </section>
+
+            <section class="menu-section" id="drinks">
+                <div class="section-header">
+                    <div>
+                        <h3>Drinks</h3>
+                        <p>House-made refreshers and café staples.</p>
+                    </div>
+                    <span class="section-note">Served hot or iced.</span>
+                </div>
+                <div class="menu-grid">
+                <!-- Food Item 10 -->
+                <article class="menu-item accent-sea">
+                    <div class="item-image">
+                        <img src="food-images/Good_Food_Display_-_NCI_Visuals_Online.jpg" alt="Craft Lemonade">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">Craft Lemonade</h3>
+                            <span class="item-price">$5.99</span>
+                        </div>
+                        <div class="item-badges">
+                            <span class="item-badge refreshing">Refreshing</span>
+                        </div>
+                        <p class="item-description">Fresh-squeezed lemonade with a hint of mint and honey.</p>
+                        <div class="item-tags">
+                            <span>Mint</span>
+                            <span>Honey</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToOrder('Craft Lemonade', 5.99, 'food-images/Good_Food_Display_-_NCI_Visuals_Online.jpg')">Add to Order</button>
+                    </div>
+                </article>
+
+                <!-- Food Item 11 -->
+                <article class="menu-item accent-ink">
+                    <div class="item-image">
+                        <img src="food-images/images.jpg" alt="Cappuccino">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">Cappuccino</h3>
+                            <span class="item-price">$4.99</span>
+                        </div>
+                        <div class="item-badges">
+                            <span class="item-badge classic">Classic</span>
+                        </div>
+                        <p class="item-description">Rich espresso with steamed milk and foam, dusted with cocoa powder.</p>
+                        <div class="item-tags">
+                            <span>Double shot</span>
+                            <span>Velvety foam</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToOrder('Cappuccino', 4.99, 'food-images/images.jpg')">Add to Order</button>
+                    </div>
+                </article>
+                </div>
             </section>
         </div>
     </main>
@@ -241,7 +389,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Bong Tha Restaurant & Café. All rights reserved.</p>
+            <p>&copy; 2026 Bong Tha Restaurant & Café. All rights reserved.</p>
         </div>
     </footer>
 
@@ -427,4 +575,3 @@
     </script>
 </body>
 </html>
-
